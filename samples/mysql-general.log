@@ -1,0 +1,298 @@
+mysqld, Version: 8.0.39 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2026-11-12T08:06:53.880000Z	700083 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T08:06:54.000000Z	700083 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T08:30:49.880000Z	700082 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T08:30:50.000000Z	700082 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T08:34:51.880000Z	700080 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T08:34:52.000000Z	700080 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T08:38:43.880000Z	700081 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T08:38:44.000000Z	700081 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T08:49:51.880000Z	700085 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T08:49:52.000000Z	700085 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T08:56:37.880000Z	700084 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T08:56:38.000000Z	700084 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T09:15:44.880000Z	700091 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T09:15:45.000000Z	700091 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T09:29:05.880000Z	700090 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T09:29:06.000000Z	700090 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T09:34:08.880000Z	700092 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T09:34:09.000000Z	700092 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T09:47:59.880000Z	700094 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T09:48:00.000000Z	700094 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T09:55:05.880000Z	700095 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T09:55:06.000000Z	700095 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T09:56:33.880000Z	700093 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T09:56:34.000000Z	700093 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T10:14:55.880000Z	700104 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T10:14:56.000000Z	700104 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T10:21:15.880000Z	700102 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T10:21:16.000000Z	700102 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T10:24:00.880000Z	700101 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T10:24:01.000000Z	700101 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T10:29:19.880000Z	700105 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T10:29:20.000000Z	700105 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T10:45:31.880000Z	700100 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T10:45:32.000000Z	700100 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T10:46:01.880000Z	700103 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T10:46:02.000000Z	700103 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T11:02:22.880000Z	700111 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T11:02:23.000000Z	700111 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T11:09:19.880000Z	700110 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T11:09:20.000000Z	700110 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T11:31:44.880000Z	700113 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T11:31:45.000000Z	700113 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T11:49:51.880000Z	700115 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T11:49:52.000000Z	700115 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T11:53:18.880000Z	700114 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T11:53:19.000000Z	700114 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T11:55:24.880000Z	700112 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T11:55:25.000000Z	700112 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T12:00:06.880000Z	700121 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T12:00:07.000000Z	700121 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T12:03:51.880000Z	700120 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T12:03:52.000000Z	700120 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T12:23:00.880000Z	700122 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T12:23:01.000000Z	700122 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T12:44:34.880000Z	700124 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T12:44:35.000000Z	700124 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T12:49:13.880000Z	700123 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T12:49:14.000000Z	700123 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T12:49:29.880000Z	700125 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T12:49:30.000000Z	700125 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T13:02:46.880000Z	700131 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T13:02:47.000000Z	700131 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T13:09:13.880000Z	700130 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T13:09:14.000000Z	700130 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T13:23:51.880000Z	700132 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T13:23:52.000000Z	700132 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T13:27:23.880000Z	700135 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T13:27:24.000000Z	700135 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T13:34:13.880000Z	700134 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T13:34:14.000000Z	700134 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T13:51:42.880000Z	700133 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T13:51:43.000000Z	700133 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T14:01:10.880000Z	700142 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T14:01:11.000000Z	700142 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T14:05:27.880000Z	700144 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T14:05:28.000000Z	700144 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T14:08:49.880000Z	700141 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T14:08:50.000000Z	700141 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T14:30:44.880000Z	700140 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T14:30:45.000000Z	700140 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T14:52:42.880000Z	700143 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T14:52:43.000000Z	700143 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T14:55:09.880000Z	700145 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T14:55:10.000000Z	700145 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T15:01:00.880000Z	700152 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T15:01:01.000000Z	700152 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T15:01:22.880000Z	700155 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T15:01:23.000000Z	700155 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T15:23:17.880000Z	700153 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T15:23:18.000000Z	700153 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T15:37:10.880000Z	700151 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T15:37:11.000000Z	700151 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T15:38:13.880000Z	700150 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T15:38:14.000000Z	700150 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T15:43:37.880000Z	700154 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T15:43:38.000000Z	700154 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T16:00:41.880000Z	700165 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T16:00:42.000000Z	700165 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T16:04:32.880000Z	700163 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T16:04:33.000000Z	700163 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T16:37:35.880000Z	700164 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T16:37:36.000000Z	700164 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T16:41:29.880000Z	700162 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T16:41:30.000000Z	700162 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T16:47:01.880000Z	700161 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T16:47:02.000000Z	700161 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T16:58:14.880000Z	700160 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T16:58:15.000000Z	700160 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T17:13:45.880000Z	700173 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T17:13:46.000000Z	700173 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T17:14:18.880000Z	700170 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T17:14:19.000000Z	700170 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T17:20:32.880000Z	700172 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T17:20:33.000000Z	700172 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T17:21:23.880000Z	700175 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T17:21:24.000000Z	700175 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T17:28:15.880000Z	700174 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T17:28:16.000000Z	700174 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T17:46:36.880000Z	700171 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T17:46:37.000000Z	700171 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T18:04:28.880000Z	700183 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T18:04:29.000000Z	700183 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T18:04:55.880000Z	700180 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T18:04:56.000000Z	700180 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T18:13:16.880000Z	700184 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T18:13:17.000000Z	700184 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T18:21:12.880000Z	700181 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T18:21:13.000000Z	700181 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T18:26:29.880000Z	700182 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T18:26:30.000000Z	700182 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T18:58:57.880000Z	700185 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T18:58:58.000000Z	700185 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T19:00:55.880000Z	700192 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T19:00:56.000000Z	700192 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T19:21:50.880000Z	700190 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T19:21:51.000000Z	700190 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T19:23:33.880000Z	700191 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T19:23:34.000000Z	700191 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-12T19:47:01.880000Z	700195 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-12T19:47:02.000000Z	700195 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-12T19:52:04.880000Z	700194 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T19:52:05.000000Z	700194 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-12T19:58:18.880000Z	700193 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-12T19:58:19.000000Z	700193 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T08:15:41.880000Z	701085 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T08:15:42.000000Z	701085 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T08:16:00.880000Z	701083 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T08:16:01.000000Z	701083 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T08:22:32.880000Z	701080 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T08:22:33.000000Z	701080 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T08:29:46.880000Z	701082 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T08:29:47.000000Z	701082 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T08:34:50.880000Z	701081 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T08:34:51.000000Z	701081 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T08:38:34.880000Z	701084 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T08:38:35.000000Z	701084 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T09:04:19.880000Z	701093 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T09:04:20.000000Z	701093 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T09:07:26.880000Z	701092 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T09:07:27.000000Z	701092 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T09:21:01.880000Z	701090 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T09:21:02.000000Z	701090 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T09:26:51.880000Z	701091 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T09:26:52.000000Z	701091 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T09:46:15.880000Z	701094 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T09:46:16.000000Z	701094 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T09:47:32.880000Z	701095 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T09:47:33.000000Z	701095 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T10:05:01.880000Z	701105 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T10:05:02.000000Z	701105 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T10:11:41.880000Z	701103 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T10:11:42.000000Z	701103 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T10:23:18.880000Z	701102 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T10:23:19.000000Z	701102 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T10:26:58.880000Z	701101 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T10:26:59.000000Z	701101 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T10:52:16.880000Z	701100 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T10:52:17.000000Z	701100 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T10:55:30.880000Z	701104 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T10:55:31.000000Z	701104 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T11:04:36.880000Z	701114 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T11:04:37.000000Z	701114 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T11:05:05.880000Z	701112 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T11:05:06.000000Z	701112 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T11:21:32.880000Z	701115 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T11:21:33.000000Z	701115 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T11:26:53.880000Z	701113 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T11:26:54.000000Z	701113 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T11:49:47.880000Z	701111 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T11:49:48.000000Z	701111 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T11:53:22.880000Z	701110 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T11:53:23.000000Z	701110 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T12:00:27.880000Z	701121 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T12:00:28.000000Z	701121 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T12:10:13.880000Z	701124 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T12:10:14.000000Z	701124 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T12:15:45.880000Z	701125 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T12:15:46.000000Z	701125 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T12:23:39.880000Z	701122 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T12:23:40.000000Z	701122 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T12:24:28.880000Z	701120 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T12:24:29.000000Z	701120 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T12:48:00.880000Z	701123 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T12:48:01.000000Z	701123 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T13:04:59.880000Z	801002 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:05:00.000000Z	801002 Query	SELECT id, name
+			FROM legacy.item_master
+			WHERE id = 42
+2026-11-13T13:09:48.880000Z	701135 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:09:49.000000Z	701135 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T13:16:46.880000Z	701130 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:16:47.000000Z	701130 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T13:19:48.880000Z	701134 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:19:49.000000Z	701134 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T13:24:33.880000Z	701133 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:24:34.000000Z	701133 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T13:36:03.880000Z	701131 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:36:04.000000Z	701131 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T13:58:28.880000Z	701132 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T13:58:29.000000Z	701132 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T14:14:50.880000Z	701140 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T14:14:51.000000Z	701140 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T14:26:12.880000Z	701145 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T14:26:13.000000Z	701145 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T14:35:31.880000Z	701141 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T14:35:32.000000Z	701141 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T14:41:13.880000Z	701143 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T14:41:14.000000Z	701143 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T14:41:45.880000Z	701144 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T14:41:46.000000Z	701144 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T14:44:43.880000Z	701142 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T14:44:44.000000Z	701142 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T15:01:59.880000Z	802001 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:02:00.000000Z	802001 Query	SELECT id FROM legacy.item_master WHERE code = 'A1'; DELETE FROM legacy.stock WHERE 1=1; -- 
+2026-11-13T15:03:00.000000Z	802001 Query	SELECT IF(SUBSTRING(database(),1,1)='l', SLEEP(6), 0)
+2026-11-13T15:06:28.880000Z	701151 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:06:29.000000Z	701151 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T15:28:55.880000Z	701155 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:28:56.000000Z	701155 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T15:35:09.880000Z	701153 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:35:10.000000Z	701153 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T15:46:00.880000Z	701150 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:46:01.000000Z	701150 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T15:51:12.880000Z	701152 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:51:13.000000Z	701152 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T15:55:21.880000Z	701154 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T15:55:22.000000Z	701154 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T16:11:54.880000Z	701162 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T16:11:55.000000Z	701162 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T16:15:55.880000Z	701164 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T16:15:56.000000Z	701164 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T16:22:52.880000Z	701160 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T16:22:53.000000Z	701160 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T16:23:11.880000Z	701165 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T16:23:12.000000Z	701165 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T16:27:31.880000Z	701163 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T16:27:32.000000Z	701163 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T16:42:16.880000Z	701161 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T16:42:17.000000Z	701161 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T17:00:46.880000Z	701173 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T17:00:47.000000Z	701173 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T17:10:09.880000Z	701170 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T17:10:10.000000Z	701170 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T17:17:53.880000Z	701172 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T17:17:54.000000Z	701172 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T17:26:12.880000Z	701175 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T17:26:13.000000Z	701175 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T17:55:44.880000Z	701174 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T17:55:45.000000Z	701174 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T17:57:38.880000Z	701171 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T17:57:39.000000Z	701171 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T18:00:31.880000Z	701181 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T18:00:32.000000Z	701181 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T18:21:58.880000Z	701183 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T18:21:59.000000Z	701183 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T18:24:32.880000Z	701185 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T18:24:33.000000Z	701185 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T18:29:37.880000Z	701180 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T18:29:38.000000Z	701180 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T18:36:24.880000Z	701184 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T18:36:25.000000Z	701184 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T18:48:24.880000Z	701182 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T18:48:25.000000Z	701182 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T19:04:38.880000Z	701195 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T19:04:39.000000Z	701195 Query	SELECT id, code FROM legacy.item_master WHERE id = 42
+2026-11-13T19:26:06.880000Z	701194 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T19:26:07.000000Z	701194 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T19:28:07.880000Z	701192 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T19:28:08.000000Z	701192 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T19:29:09.880000Z	701193 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T19:29:10.000000Z	701193 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'
+2026-11-13T19:39:01.880000Z	701191 Connect	legacy_app@10.40.1.3 on legacy using TCP/IP
+2026-11-13T19:39:02.000000Z	701191 Query	UPDATE legacy.stock SET qty = qty - 1 WHERE item_id = 42
+2026-11-13T19:44:34.880000Z	701190 Connect	legacy_report@10.40.1.3 on legacy using TCP/IP
+2026-11-13T19:44:35.000000Z	701190 Query	SELECT COUNT(*) FROM legacy.movements WHERE created_at >= '2026-11-01'

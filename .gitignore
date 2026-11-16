@@ -16,3 +16,14 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# ---- SQL 审计分析平台 ----
+# 本地数据库与导入的审计日志不应入库（可能含真实账号与 SQL）
+src/SqlAudit.Web/data/
+*.db
+*.db-wal
+*.db-shm
+# 构建输出
+bin/
+obj/
+# 生成的样本日志会随仓库提供（可直接用于演示）

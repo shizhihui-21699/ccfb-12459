@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SQL 审计分析平台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="brand-mark">
+        <ellipse cx="12" cy="6" rx="8" ry="3.2"></ellipse>
+        <path d="M4 6v6c0 1.77 3.58 3.2 8 3.2s8-1.43 8-3.2V6"></path>
+        <path d="M4 12v6c0 1.77 3.58 3.2 8 3.2s8-1.43 8-3.2v-6"></path>
+      </svg>
+      <div>
+        <h1>SQL 审计分析平台</h1>
+        <p class="brand-sub">MySQL 审计插件 · general log · PostgreSQL csvlog</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-view="dashboard" role="tab">概览</button>
+      <button class="tab" data-view="events" role="tab">告警与事件</button>
+      <button class="tab" data-view="chains" role="tab">攻击链</button>
+      <button class="tab" data-view="rules" role="tab">检测规则</button>
+      <button class="tab" data-view="import" role="tab">导入日志</button>
+    </nav>
+    <div class="topbar-actions">
+      <span class="status-dot" id="health-dot" title="服务状态"></span>
+      <span class="status-text" id="health-text">连接中…</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 概览 -->
+    <section class="view" id="view-dashboard">
+      <div class="metric-grid" id="metrics">
+        <div class="metric"><span class="metric-label">事件总数</span><span class="metric-value" id="m-total">–</span></div>
+        <div class="metric metric--alert"><span class="metric-label">告警事件</span><span class="metric-value" id="m-alerts">–</span></div>
+        <div class="metric metric--critical"><span class="metric-label">严重级别</span><span class="metric-value" id="m-critical">–</span></div>
+        <div class="metric"><span class="metric-label">导入批次</span><span class="metric-value" id="m-batches">–</span></div>
+      </div>
+
+      <div class="panel-grid">
+        <section class="panel panel--wide">
+          <h2>告警时间分布</h2>
+          <p class="panel-hint">灰色为全部事件，红色为命中规则的事件。悬停查看具体数值。</p>
+          <div id="timeline" class="timeline-host"></div>
+        </section>
+
+        <section class="panel">
+          <h2>规则命中排行</h2>
+          <div id="rule-hits" class="bar-list"></div>
+        </section>
+
+        <section class="panel">
+          <h2>账号分布</h2>
+          <div id="account-facets" class="bar-list"></div>
+        </section>
+
+        <section class="panel">
+          <h2>数据库分布</h2>
+          <div id="db-facets" class="bar-list"></div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 事件 -->
+    <section class="view is-hidden" id="view-events">
+      <form class="filters" id="filters">
+        <label class="field">
+          <span>账号</span>
+          <select name="account" id="f-account"><option value="">全部账号</option></select>
+        </label>
+        <label class="field">
+          <span>数据库</span>
+          <select name="database" id="f-database"><option value="">全部数据库</option></select>
+        </label>
+        <label class="field">
+          <span>起始时间</span>
+          <input type="datetime-local" name="from" id="f-from">
+        </label>
+        <label class="field">
+          <span>结束时间</span>
+          <input type="datetime-local" name="to" id="f-to">
+        </label>
+        <label class="field">
+          <span>最低严重度</span>
+          <select name="minSeverity" id="f-severity">
+            <option value="">不限</option>
+            <option value="low">低危及上</option>
+            <option value="medium">中危及上</option>
+            <option value="high">高危及以上</option>
+            <option value="critical">仅严重</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>规则</span>
+          <select name="rules" id="f-rules"><option value="">全部规则</option></select>
+        </label>
+        <label class="field field--grow">
+          <span>关键词</span>
+          <input type="search" name="text" id="f-text" placeholder="SQL 片段 / 客户端地址">
+        </label>
+        <label class="field field--check">
+          <input type="checkbox" name="alertsOnly" id="f-alerts-only" checked>
+          <span>仅显示告警</span>
+        </label>
+        <div class="filter-actions">
+          <button type="submit" class="btn btn--primary">查询</button>
+          <button type="button" class="btn" id="f-reset">重置</button>
+        </div>
+      </form>
+
+      <div class="result-bar">
+        <span id="result-summary">–</span>
+        <div class="pager">
+          <button class="btn btn--sm" id="page-prev" disabled>上一页</button>
+          <span id="page-label">1 / 1</span>
+          <button class="btn btn--sm" id="page-next" disabled>下一页</button>
+        </div>
+      </div>
+
+      <div id="event-list" class="event-list"></div>
+    </section>
+
+    <!-- 攻击链 -->
+    <section class="view is-hidden" id="view-chains">
+      <p class="view-intro">
+        同一连接内、30 分钟窗口中出现多个不同注入/外泄信号时聚合为一条攻击链。
+        按阶段还原攻击者动作顺序。
+      </p>
+      <div id="chain-list" class="chain-list"></div>
+    </section>
+
+    <!-- 规则 -->
+    <section class="view is-hidden" id="view-rules">
+      <p class="view-intro">
+        点击任一规则查看判定逻辑与阈值。所有规则都基于 SQL 词法分析，而非正则字面匹配，
+        因此能正确处理字符串内的分号、注释与美元引用。
+      </p>
+      <div id="rule-list" class="rule-list"></div>
+    </section>
+
+    <!-- 导入 -->
+    <section class="view is-hidden" id="view-import">
+      <div class="panel-grid">
+        <section class="panel panel--wide">
+          <h2>导入审计日志</h2>
+          <p class="panel-hint">支持 MySQL 审计插件 JSON（JSON Lines / 数组）、MySQL general log、PostgreSQL csvlog。留空格式则自动识别。</p>
+          <form id="import-form" class="import-form">
+            <label class="dropzone" id="dropzone">
+              <input type="file" name="file" id="file-input" accept=".json,.jsonl,.log,.csv,.txt">
+              <span class="dropzone-icon">⇪</span>
+              <span class="dropzone-text" id="dropzone-text">点击选择或拖拽日志文件到此处</span>
+              <span class="dropzone-hint" id="dropzone-hint">单个文件最大 256 MB</span>
+            </label>
+            <div class="import-row">
+              <label class="field">
+                <span>日志格式</span>
+                <select name="source" id="import-source">
+                  <option value="auto">自动识别</option>
+                  <option value="mysql-audit">MySQL 审计插件 JSON</option>
+                  <option value="mysql-general">MySQL general log</option>
+                  <option value="pg-csvlog">PostgreSQL csvlog</option>
+                </select>
+              </label>
+              <label class="field field--grow">
+                <span>备注（可选）</span>
+                <input type="text" name="note" id="import-note" placeholder="例如：11月12日生产库导出">
+              </label>
+              <button type="submit" class="btn btn--primary" id="import-submit" disabled>开始导入</button>
+            </div>
+          </form>
+          <div id="import-result" class="import-result"></div>
+        </section>
+
+        <section class="panel panel--wide">
+          <h2>已导入批次</h2>
+          <div id="batch-list" class="batch-list"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- 详情抽屉 -->
+  <aside class="drawer is-hidden" id="drawer" aria-label="事件详情">
+    <div class="drawer-head">
+      <h2 id="drawer-title">事件详情</h2>
+      <button class="icon-btn" id="drawer-close" aria-label="关闭">✕</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+  </aside>
+  <div class="scrim is-hidden" id="scrim"></div>
+
+  <div class="toast is-hidden" id="toast"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
